@@ -4,51 +4,51 @@ document.addEventListener("DOMContentLoaded",()=>{
     const cardArray = [
         {
             name:"cheeseburger",
-            src:"./images/cheeseburger.png"
+            src:"cheeseburger.png"
         },
         {
             name:"cheeseburger",
-            src:"./images/cheeseburger.png"
+            src:"cheeseburger.png"
         },
         {
             name:"fries",
-            src:"./images/fries.png"
+            src:"fries.png"
         },
         {
             name:"fries",
-            src:"./images/fries.png"
+            src:"fries.png"
         },
         {
             name:"hotdog",
-            src:"./images/hotdog.png"
+            src:"hotdog.png"
         },
         {
             name:"hotdog",
-            src:"./images/hotdog.png"
+            src:"hotdog.png"
         },
         {
             name:"ice-cream",
-            src:"./images/ice-cream.png"
+            src:"ice-cream.png"
         },
         {
             name:"ice-cream",
-            src:"./images/ice-cream.png"
+            src:"ice-cream.png"
         },
         {
             name:"milkshake",
-            src:"./images/milkshake.png"
+            src:"milkshake.png"
         },
         {
             name:"milkshake",
-            src:"./images/milkshake.png"
+            src:"milkshake.png"
         },
         {
             name:"pizza",
-            src:"./images/pizza.png"
+            src:"pizza.png"
         },
         {
             name:"pizza",
-            src:"./images/pizza.png"
+            src:"pizza.png"
         }
     ]
     cardChosen =[]
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     function createBoard (){
         for(let i=0;i<cardArray.length;i++){
             const gamecard  = document.createElement("img")
-            gamecard.setAttribute("src","./images/blank.png")
+            gamecard.setAttribute("src","blank.png")
             gamecard.setAttribute("id",i)
             gamecard.addEventListener("click",flipcard)
             board.appendChild(gamecard)
@@ -87,13 +87,13 @@ document.addEventListener("DOMContentLoaded",()=>{
         const cards = document.querySelectorAll("img")
         console.log(cardChosen)
         if(cardChosen[0]!==cardChosen[1]||cardChosenId[0]===cardChosenId[1]){
-            cards[cardChosenId[0]].setAttribute("src","./images/blank.png")
-            cards[cardChosenId[1]].setAttribute("src","./images/blank.png")
+            cards[cardChosenId[0]].setAttribute("src","blank.png")
+            cards[cardChosenId[1]].setAttribute("src","blank.png")
             console.log("not a match!")
         }
         else{
-            cards[cardChosenId[0]].setAttribute("src","./images/dimgray.png")
-            cards[cardChosenId[1]].setAttribute("src","./images/dimgray.png")
+            cards[cardChosenId[0]].setAttribute("src","dimgray.png")
+            cards[cardChosenId[1]].setAttribute("src","dimgray.png")
             cards[cardChosenId[0]].removeEventListener("click",flipcard)
             cards[cardChosenId[1]].removeEventListener("click",flipcard)
             cardsWon.push(cards[cardChosenId[0]].id)
